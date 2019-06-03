@@ -1,0 +1,57 @@
+We are making a system for a receptionist at an airport.
+
+At the airport we have:
+
+- Planes
+- Helicopters
+
+^ These are both "Aircraft"
+
+All aircraft have:
+
+- Seat number
+- Registration number
+etc...
+
+We also have terminals at the airport, who all fly to different destination using different flight companies
+
+Flying from the airport, we have passengers:
+
+Passengers have:
+
+- Name
+- Passport number
+
+There are also staff:
+
+- Receptionists
+- Flight crew
+- Pilots/copilots
+
+-----------------------------------------------------------------
+
+The passengers and aircraft and all necessary staff are linked by a single "Flight Trip"
+
+Each flight trip must have:
+
+- Origin
+- Destination
+- Aircraft (obj)
+- Passenger list (obj)
+- DateTime
+
+---------------------------------------------------------------------
+
+For the HW we need at least:
+
+- List of airplanes
+- Passenger list
+- A link between the two using a flight trip
+
+Our receptionist needs to have the following actions:
+
+- Create a passenger
+- List existing flight trips
+- Add a passenger to a flight trip
+
+Do all the relevant tests to ensure all these conditions are met. Only then can the objects in the task be fleshed out.
