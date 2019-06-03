@@ -1,10 +1,13 @@
 from aircraft_class import *
 from flight_class import *
 from passenger_class import *
+from plane_class import *
+from helicopter_class import *
 
-craft1 = Aircraft("MD345", 150)
-craft2 = Aircraft("RV111", 200)
-craft3 = Aircraft("HT925", 100)
+craft1 = Plane("MD345", 150)
+craft2 = Plane("RV111", 200)
+craft3 = Plane("HT925", 100)
+craft4 = Helicopter("LT100", 5)
 
 mor_riv = Flight()
 hob_riv = Flight()

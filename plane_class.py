@@ -1,7 +1,7 @@
+from aircraft_class import Aircraft
+
 class Plane(Aircraft):
 
-
-    def __init__(self, reg, type, seats):
-        super().__init__(reg, type, seats=0)
-
-        pass
+    def __init__(self, reg, seats=0):
+        super().__init__(reg, seats)
+        self.wing_number = 2

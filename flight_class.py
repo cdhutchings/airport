@@ -12,7 +12,7 @@ class Flight:
     count = 0
 
     def __init__(self):
-        self.flight_instances.append(self)
+        Flight.flight_instances.append(self)
         #self.count = next(self.count)
         Flight.count += 1
         self.origin = ''
