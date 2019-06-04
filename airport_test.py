@@ -109,7 +109,7 @@ def test_flight_details():
 
     ori = "Hobbiton"
     des = "Mordor"
-    num = "1DNSW"
+    num = "1DNSWI2M"
 
     test.assign_journey(ori, des, num)
 
