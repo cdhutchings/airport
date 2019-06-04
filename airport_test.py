@@ -62,7 +62,7 @@ def test_passenger_error():
 
     # Checks that an exception is raised when an attempt is made to create a passenger with no arguments
 
-    with pytest.raises(Exception):
+    with pytest.raises(TypeError):
         error = Passenger()
 
 # A plane can be created with a registration number
