@@ -3,9 +3,11 @@ from connection import *
 
 db_connect = ConnMsSql("localhost,1433", "airport")
 
-faramir = Passenger("6", 'Faramir', 'Denethorson', 2734419)
+azog = Passenger(7, 'Azog', 'the Goblin', 6774833)
 
+try:
+    db_connect.insert_passenger(azog.id, azog.fname, azog.lname, azog.passport)
 
-db_connect.query(f"INSERT INTO passengers "
-                 f"VALUES ({faramir.id}, '{faramir.fname}', '{faramir.lname}', {faramir.passport});")
-db_connect.docker_con.commit()
+except pyodbc.ProgrammingError:
+
+    print("There has been an issue committing your entry to the database. Please check how your function is formatted.")

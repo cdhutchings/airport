@@ -18,7 +18,7 @@ class ConnMsSql:
 
     # clients having access to query anything is quite dangerous, so it would be good to encapsulate it with __
 
-    def query(self, sql_query):
+    def __query(self, sql_query):
 
         return self.cursor.execute(sql_query)
         # ERROR HANDLE
@@ -26,15 +26,15 @@ class ConnMsSql:
 
     def return_passengers(self):
 
-        query = self.query("SELECT * FROM passengers")
+        query = self.__query("SELECT * FROM passengers")
 
         return query
 
     def insert_passenger(self, id, fname, lname, passport):
 
-        self.query(f"INSERT INTO passengers (id, fname, lname, passport) "
-                             f"VALUES ({id}, {fname}, {lname}, {passport}")
-
+        self.__query(f"INSERT INTO passengers "
+                         f"SELECT({id}, '{fname}', '{lname}', {passport});")
+        self.docker_con.commit()
 
 #     def print_all_products(self):
 #
